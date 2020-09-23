@@ -1,0 +1,34 @@
+extends:
+    - eslint:recommended
+    - plugin:@typescript-eslint/recommended
+plugins:
+    - import
+root: true
+rules:
+    "@typescript-eslint/explicit-module-boundary-types": 0
+    "@typescript-eslint/no-explicit-any": 0
+    "@typescript-eslint/no-unused-vars": [ 2, { "argsIgnorePattern": "^_" } ]
+    "@typescript-eslint/indent": [ error, tab ]
+    "arrow-spacing": [ error, { before: true, after: true } ]
+    "block-spacing": [ error, always ]
+    "comma-style": [ error, last ]
+    "import/order": [
+        error,
+        {
+            alphabetize: { order: asc },
+            groups: [ builtin, external, internal, parent, sibling ],
+            newlines-between: always,
+        },
+    ]
+    "indent": 0 # Should be turned off when using @typescript-eslint/indent.
+    "key-spacing": [ error, { beforeColon: false, afterColon: true, mode: minimum } ]
+    "keyword-spacing": [ error, { before: true, after: true } ]
+    "no-constant-condition": error
+    "no-control-regex": 0 # We strip ANSI escape codes using regex.
+    "no-duplicate-imports": [ "error", { "includeExports": true } ]
+    "no-unused-vars": 0 # Should be turned off when using @typescript-eslint/no-unused-vars.
+    "no-var": error
+    "prefer-const": error
+    "semi-spacing": [ error, { before: false, after: true } ]
+    "semi": [ 2, "always" ]
+    "spaced-comment": [ error, always ]
