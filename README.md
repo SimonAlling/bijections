@@ -1,4 +1,4 @@
-# ts-function-properties
+# bijections
 
 _Statically typed properties about functions._
 
